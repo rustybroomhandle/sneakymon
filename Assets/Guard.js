@@ -6,22 +6,34 @@ private var CurrentDest : int = 0;
 var agent : NavMeshAgent ;
 var player : GameObject;
 var excl : GameObject;
+var status : String = "patrolling";
+var lastseen : GameObject;
 
 function Start() {
     agent = GetComponent(NavMeshAgent);
     agent.destination = WayPoints[CurrentDest].transform.position;
     player = GameObject.Find("Char");
-    excl = GameObject.Find("exclr");
+    excl = transform.Find("excl/exclr").gameObject;
+    lastseen = GameObject.Find("lastseen");
 }
 
 function Update() {
 
+  if (status == "investigating") {
+      agent.destination = lastseen.transform.position;
+  }
+
   if (agent.remainingDistance <= 1.5f) {
-    CurrentDest++;
-    if (CurrentDest == WayPoints.length) {
-      CurrentDest=0;
+      if (status != "investigating") {
+        CurrentDest++;
+      }
+      status = "patrolling";
+      if (CurrentDest == WayPoints.length) {
+        CurrentDest=0;
+      }
+    if (status == "patrolling") {
+      agent.destination = WayPoints[CurrentDest].transform.position;
     }
-    agent.destination = WayPoints[CurrentDest].transform.position;
   }
 
   var hit : RaycastHit;
@@ -40,5 +52,8 @@ function Update() {
     }
   }
 
+}
 
+function Investigate() {
+  status = "investigating";
 }

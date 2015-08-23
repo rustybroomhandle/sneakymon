@@ -6,7 +6,7 @@ private var moveLeft : boolean = false;
 private var moveForward : boolean = false;
 private var moveBackward : boolean = false;
 private var moveSpeed : float =  10.0;
-
+var keys : int = 0;
 
 function Start () {
 
@@ -40,9 +40,47 @@ function Update() {
 	if (Input.GetKeyUp("s") || Input.GetKeyUp(KeyCode.DownArrow)) {
 	    moveBackward=false;
 	}
+
+  if (Input.GetKeyDown("e")) {
+      if (touching && Vector3.Distance(touching.transform.position, transform.position) < 2) {
+        print("searching");
+        searching = true;
+      }
+  }
+  if (Input.GetKeyUp("e")) {
+    print("not searching");
+    searchcount = 0;
+    searching = false;
+  }
 }
 
+var searching : boolean = false;
+var searchcount : float = 0;
+
 function FixedUpdate() {
+
+  if (touching) {
+    var searched = touching.GetComponent(Container).searched;
+    var containerkeys = touching.GetComponent(Container).key;
+  }
+  if (searching) {
+    if (searchcount < 100) {
+      touching.transform.Find("srch").transform.localPosition.y = 0;
+      searchcount+=0.5;
+    } else {
+      if (containerkeys > 0) {
+        keys = keys + 1;
+        containerkeys = 0;
+      }
+      touching.transform.Find("srch").transform.localPosition.y = 1000;
+      touching.transform.Find("srched").transform.localPosition.y = 0;
+      searched = true;
+    }
+  }
+  if (touching) {
+    touching.transform.Find("srch").GetComponent(TextMesh).text = Mathf.Floor(searchcount) + " %";
+  }
+
   if (moveRight) {
 		GetComponent.<Rigidbody>().velocity.x = moveSpeed;
     transform.rotation.eulerAngles.y = 90;
@@ -69,4 +107,12 @@ function FixedUpdate() {
 	if (!moveForward && !moveBackward) {
 	    GetComponent.<Rigidbody>().velocity.z = 0;
 	}
+}
+
+var touching : GameObject;
+
+function OnCollisionEnter(collision: Collision) {
+  if (collision.gameObject.tag == "container") {
+    touching = collision.gameObject;
+  }
 }
