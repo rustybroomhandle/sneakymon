@@ -59,17 +59,19 @@ var searchcount : float = 0;
 
 function FixedUpdate() {
 
+  GameObject.Find("keystxt").GetComponent(TextMesh).text = "K:" + keys;
+
   if (touching) {
     var searched = touching.GetComponent(Container).searched;
     var containerkeys = touching.GetComponent(Container).key;
   }
-  if (searching) {
+  if (searching && searched == false) {
     if (searchcount < 100) {
       touching.transform.Find("srch").transform.localPosition.y = 0;
       searchcount+=0.5;
     } else {
       if (containerkeys > 0) {
-        keys = keys + 1;
+        keys = keys + containerkeys;
         containerkeys = 0;
       }
       touching.transform.Find("srch").transform.localPosition.y = 1000;
