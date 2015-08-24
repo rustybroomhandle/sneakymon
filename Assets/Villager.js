@@ -28,11 +28,11 @@ function Update() {
 */
   var hit : RaycastHit;
   if (Physics.Linecast (transform.position, player.transform.position, hit)) {
-    if (hit.transform.gameObject.name == "Char" && hit.distance < 15) {
+    if (hit.transform.gameObject.name == "Char" && hit.distance < 13) {
       var targetDir = player.transform.position - transform.position;
 		  var forward = transform.forward;
 		  var angle = Vector3.Angle(targetDir, forward);
-		  if (angle < 15.0) {
+		  if (angle < 20.0) {
         excl.transform.localPosition.y = 0;
         CallGuards();
       } else {
@@ -47,6 +47,10 @@ function Update() {
 }
 
 function CallGuards() {
+  if (!GameObject.Find("ovill").GetComponent.<AudioSource>().isPlaying) {
+    GameObject.Find("ovill").GetComponent.<AudioSource>().Play();
+  }
+
   lastseen.transform.position.x = player.transform.position.x;
   lastseen.transform.position.z = player.transform.position.z;
 
@@ -55,7 +59,6 @@ function CallGuards() {
   for (var target : GameObject in guards) {
     distance  = Vector3.Distance(target.transform.position, transform.position);
     if(distance < 30) {
-      Debug.Log("YEAH!");
         target.GetComponent("Guard").SendMessage("Investigate");
     }
   }

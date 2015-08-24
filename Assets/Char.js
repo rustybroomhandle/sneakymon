@@ -61,7 +61,11 @@ function Update() {
       BStop();
   }
 
-  if (Input.GetKeyDown("e")) {
+  if (Input.GetKey("escape")) {
+    Application.LoadLevel("title");
+  }
+
+  if (Input.GetKeyDown("e") || Input.GetKeyDown(KeyCode.Space)) {
       if (touching && Vector3.Distance(touching.transform.position, transform.position) < 4 && touching.tag=="container") {
         searching = true;
       }
@@ -69,7 +73,7 @@ function Update() {
         freeing = true;
       }
   }
-  if (Input.GetKeyUp("e")) {
+  if (Input.GetKeyUp("e") || Input.GetKeyUp(KeyCode.Space)) {
     searchcount = 0;
     searching = false;
     freeing = false;
@@ -97,7 +101,9 @@ function FixedUpdate() {
       searchcount+=0.5;
     } else {
       if (containerkeys > 0) {
+        GameObject.Find("okey").GetComponent.<AudioSource>().Play();
         keys = keys + containerkeys;
+        GameObject.Find("xx1").transform.position.y = 999;
         touching.GetComponent(Container).key = 0;
       }
       touching.transform.Find("srch").transform.localPosition.y = 1000;
