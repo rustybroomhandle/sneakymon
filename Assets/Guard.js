@@ -42,7 +42,7 @@ function Update() {
       var targetDir = player.transform.position - transform.position;
 		  var forward = transform.forward;
 		  var angle = Vector3.Angle(targetDir, forward);
-		  if (angle < 15.0) {
+		  if (angle < 15.0 || (angle < 80.0 && hit.distance < 5)) {
         excl.transform.localPosition.y = 0;
       } else {
         excl.transform.localPosition.y = 1000;

@@ -42,7 +42,7 @@ function Update() {
 	}
 
   if (Input.GetKeyDown("e")) {
-      if (touching && Vector3.Distance(touching.transform.position, transform.position) < 2) {
+      if (touching && Vector3.Distance(touching.transform.position, transform.position) < 3) {
         print("searching");
         searching = true;
       }
@@ -59,7 +59,7 @@ var searchcount : float = 0;
 
 function FixedUpdate() {
 
-  GameObject.Find("keystxt").GetComponent(TextMesh).text = "K:" + keys;
+  GameObject.Find("keystxt").GetComponent(TextMesh).text = keys.ToString();
 
   if (touching) {
     var searched = touching.GetComponent(Container).searched;
@@ -72,11 +72,12 @@ function FixedUpdate() {
     } else {
       if (containerkeys > 0) {
         keys = keys + containerkeys;
-        containerkeys = 0;
+        touching.GetComponent(Container).key = 0;
       }
       touching.transform.Find("srch").transform.localPosition.y = 1000;
       touching.transform.Find("srched").transform.localPosition.y = 0;
-      searched = true;
+      touching.GetComponent(Container).searched = true;
+      searching = false;
     }
   }
   if (touching) {
