@@ -1,0 +1,244 @@
+fileFormatVersion: 2
+guid: 45a29916ad0334975976b900186c0379
+timeCreated: 1440427674
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: beefee
+    100002: //RootNode
+    100004: joint1
+    100006: joint10
+    100008: joint11
+    100010: joint12
+    100012: joint15
+    100014: joint16
+    100016: joint17
+    100018: joint18
+    100020: joint19
+    100022: joint2
+    100024: joint20
+    100026: joint21
+    100028: joint22
+    100030: joint23
+    100032: joint24
+    100034: joint25
+    100036: joint26
+    100038: joint27
+    100040: joint28
+    100042: joint29
+    100044: joint3
+    100046: joint30
+    100048: joint31
+    100050: joint32
+    100052: joint33
+    100054: joint34
+    100056: joint35
+    100058: joint36
+    100060: joint5
+    100062: joint6
+    100064: joint7
+    100066: joint8
+    100068: joint9
+    100070: nurbsCircle9
+    400000: beefee
+    400002: //RootNode
+    400004: joint1
+    400006: joint10
+    400008: joint11
+    400010: joint12
+    400012: joint15
+    400014: joint16
+    400016: joint17
+    400018: joint18
+    400020: joint19
+    400022: joint2
+    400024: joint20
+    400026: joint21
+    400028: joint22
+    400030: joint23
+    400032: joint24
+    400034: joint25
+    400036: joint26
+    400038: joint27
+    400040: joint28
+    400042: joint29
+    400044: joint3
+    400046: joint30
+    400048: joint31
+    400050: joint32
+    400052: joint33
+    400054: joint34
+    400056: joint35
+    400058: joint36
+    400060: joint5
+    400062: joint6
+    400064: joint7
+    400066: joint8
+    400068: joint9
+    400070: nurbsCircle9
+    4300000: beefee
+    7400000: Take 001
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: beefee
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 21
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: beefee
+        weight: 1
+      - path: nurbsCircle9
+        weight: 1
+      - path: nurbsCircle9/joint1
+        weight: 1
+      - path: nurbsCircle9/joint1/joint2
+        weight: 1
+      - path: nurbsCircle9/joint1/joint2/joint3
+        weight: 1
+      - path: nurbsCircle9/joint1/joint2/joint3/joint5
+        weight: 1
+      - path: nurbsCircle9/joint1/joint2/joint3/joint5/joint6
+        weight: 1
+      - path: nurbsCircle9/joint1/joint2/joint3/joint5/joint6/joint7
+        weight: 1
+      - path: nurbsCircle9/joint1/joint2/joint3/joint5/joint6/joint7/joint8
+        weight: 1
+      - path: nurbsCircle9/joint1/joint2/joint3/joint5/joint6/joint7/joint8/joint9
+        weight: 1
+      - path: nurbsCircle9/joint1/joint2/joint3/joint5/joint6/joint10
+        weight: 1
+      - path: nurbsCircle9/joint1/joint2/joint3/joint5/joint6/joint10/joint11
+        weight: 1
+      - path: nurbsCircle9/joint1/joint2/joint3/joint5/joint6/joint10/joint11/joint12
+        weight: 1
+      - path: nurbsCircle9/joint1/joint2/joint3/joint5/joint6/joint31
+        weight: 1
+      - path: nurbsCircle9/joint1/joint2/joint3/joint5/joint6/joint31/joint32
+        weight: 1
+      - path: nurbsCircle9/joint1/joint2/joint3/joint15
+        weight: 1
+      - path: nurbsCircle9/joint1/joint2/joint3/joint15/joint16
+        weight: 1
+      - path: nurbsCircle9/joint1/joint2/joint3/joint15/joint16/joint17
+        weight: 1
+      - path: nurbsCircle9/joint1/joint2/joint3/joint15/joint16/joint17/joint36
+        weight: 1
+      - path: nurbsCircle9/joint1/joint2/joint3/joint18
+        weight: 1
+      - path: nurbsCircle9/joint1/joint2/joint3/joint18/joint19
+        weight: 1
+      - path: nurbsCircle9/joint1/joint2/joint3/joint18/joint19/joint20
+        weight: 1
+      - path: nurbsCircle9/joint1/joint2/joint3/joint18/joint19/joint20/joint35
+        weight: 1
+      - path: nurbsCircle9/joint1/joint21
+        weight: 1
+      - path: nurbsCircle9/joint1/joint21/joint22
+        weight: 1
+      - path: nurbsCircle9/joint1/joint21/joint22/joint23
+        weight: 1
+      - path: nurbsCircle9/joint1/joint21/joint22/joint23/joint24
+        weight: 1
+      - path: nurbsCircle9/joint1/joint25
+        weight: 1
+      - path: nurbsCircle9/joint1/joint25/joint26
+        weight: 1
+      - path: nurbsCircle9/joint1/joint25/joint26/joint27
+        weight: 1
+      - path: nurbsCircle9/joint1/joint25/joint26/joint27/joint34
+        weight: 1
+      - path: nurbsCircle9/joint1/joint28
+        weight: 1
+      - path: nurbsCircle9/joint1/joint28/joint29
+        weight: 1
+      - path: nurbsCircle9/joint1/joint28/joint29/joint30
+        weight: 1
+      - path: nurbsCircle9/joint1/joint28/joint29/joint30/joint33
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 15
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
